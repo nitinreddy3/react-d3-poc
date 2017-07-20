@@ -303,6 +303,18 @@ var Graph = React.createClass({
                 }
               },
               {
+                "id": 83,
+                "labels": [
+                  "Manager",
+                  "User"
+                ],
+                "properties": {
+                  "name": "Mohan",
+                  "email": "mohan.reddy@weboniselab.com",
+                  "additionalProperties": {}
+                }
+              },
+              {
                 "id": 79,
                 "labels": [
                   "User"
@@ -1587,8 +1599,19 @@ var Graph = React.createClass({
               {
                 "id": 6,
                 "type": "REPORTS_TO",
-                "startNode": "79",
-                "endNode": "80",
+                "startNode": "83",
+                "endNode": "79",
+                "properties": {
+                  "name": null,
+                  "email": null,
+                  "additionalProperties": {}
+                }
+              },
+              {
+                "id": 6,
+                "type": "REPORTS_TO",
+                "startNode": "80",
+                "endNode": "82",
                 "properties": {
                   "name": null,
                   "email": null,

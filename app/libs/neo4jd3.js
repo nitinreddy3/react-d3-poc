@@ -546,6 +546,7 @@
                             var manager = d.labels.indexOf("Manager") > -1;
                             var reportee = (d.labels.length == 2) && d.labels.indexOf("Reportee") > -1;
                             var user = (d.labels.length == 1) && d.labels.indexOf("User") > -1;
+                            var kpi = (d.labels.length == 1) && d.labels.indexOf("Kpi") > -1;
                             switch (true) {
                                 case manager:
                                     height = svg.node().parentElement.parentElement.clientHeight / 5;
@@ -556,8 +557,11 @@
                                 case reportee:
                                     height = 3 * svg.node().parentElement.parentElement.clientHeight / 5;
                                     break;
-                                default:
+                                case kpi:
                                     height = 4 * svg.node().parentElement.parentElement.clientHeight / 5;
+                                    break;
+                                default:
+                                    height = 5 * svg.node().parentElement.parentElement.clientHeight / 5;
                                     break;
                             }
                             return height;
