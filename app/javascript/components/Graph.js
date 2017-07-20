@@ -1681,7 +1681,7 @@ var Graph = React.createClass({
 
     render() {
         return (<div>
-            <h1>Hello</h1>
+            <h1>Graph Relationships</h1>
             <div id="graph"></div>
             {/*svg id="c" width={500} height={500}></svg>*/}
         </div>

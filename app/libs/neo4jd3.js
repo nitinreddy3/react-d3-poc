@@ -152,42 +152,42 @@
 
                             return classes;
                         })
-                       .on('click', function(d) {
-                           d.fx = d.fy = null;
+                    //    .on('click', function(d) {
+                    //        d.fx = d.fy = null;
 
-                           if (typeof options.onNodeClick === 'function') {
-                               options.onNodeClick(d);
-                           }
-                       })
-                       .on('dblclick', function(d) {
-                           stickNode(d);
+                    //        if (typeof options.onNodeClick === 'function') {
+                    //            options.onNodeClick(d);
+                    //        }
+                    //    })
+                    //    .on('dblclick', function(d) {
+                    //        stickNode(d);
 
-                           if (typeof options.onNodeDoubleClick === 'function') {
-                               options.onNodeDoubleClick(d);
-                           }
-                       })
-                       .on('mouseenter', function(d) {
-                           if (info) {
-                               updateInfo(d);
-                           }
+                    //        if (typeof options.onNodeDoubleClick === 'function') {
+                    //            options.onNodeDoubleClick(d);
+                    //        }
+                    //    })
+                    //    .on('mouseenter', function(d) {
+                    //        if (info) {
+                    //            updateInfo(d);
+                    //        }
 
-                           if (typeof options.onNodeMouseEnter === 'function') {
-                               options.onNodeMouseEnter(d);
-                           }
-                       })
-                       .on('mouseleave', function(d) {
-                           if (info) {
-                               clearInfo(d);
-                           }
+                    //        if (typeof options.onNodeMouseEnter === 'function') {
+                    //            options.onNodeMouseEnter(d);
+                    //        }
+                    //    })
+                    //    .on('mouseleave', function(d) {
+                    //        if (info) {
+                    //            clearInfo(d);
+                    //        }
 
-                           if (typeof options.onNodeMouseLeave === 'function') {
-                               options.onNodeMouseLeave(d);
-                           }
-                       })
-                       .call(d3.drag()
-                               .on('start', dragStarted)
-                               .on('drag', dragged)
-                               .on('end', dragEnded));
+                    //        if (typeof options.onNodeMouseLeave === 'function') {
+                    //            options.onNodeMouseLeave(d);
+                    //        }
+                    //    })
+                    //    .call(d3.drag()
+                    //            .on('start', dragStarted)
+                    //            .on('drag', dragged)
+                    //            .on('end', dragEnded));
                 }
 
                 function appendNodeToGraph() {

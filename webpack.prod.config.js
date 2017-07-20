@@ -73,10 +73,16 @@ module.exports = {
             }
         }),
         new webpack.optimize.UglifyJsPlugin({ minimize: true }),
-        new CopyWebpackPlugin([{
-            from: path.join(rootPath, 'app/theme/images'),
-            to: 'theme/default/images'
-        }]),
+        new CopyWebpackPlugin([
+            {
+                from: path.join(rootPath, 'app/theme/default/images'),
+                to: 'theme/default/images'
+            },
+            {
+                from: path.join(rootPath, 'app/libs/'),
+                to: 'libs',
+                toType: 'dir'
+            },]),
         new webpack.optimize.UglifyJsPlugin({
             compressor: {
                 warnings: false,
