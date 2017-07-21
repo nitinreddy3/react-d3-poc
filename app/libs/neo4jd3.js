@@ -20,7 +20,7 @@
                     justLoaded = false,
                     numClasses = 0,
                     options = {
-                        arrowSize: 10,
+                        arrowSize: 5,
                         colors: colors(),
                         highlight: undefined,
                         iconMap: fontAwesomeIcons(),
@@ -40,25 +40,25 @@
 
                 function appendGraph(container) {
                     svg = container.append('svg')
-                        .attr('width', '1200px')
+                        .attr('width', '1700px')
                         .attr('height', '1200px')
                         .attr('class', 'neo4jd3-graph')
-                        .call(d3.zoom().on('zoom', function () {
-                            var scale = d3.event.transform.k,
-                                translate = [d3.event.transform.x, d3.event.transform.y];
+                        // .call(d3.zoom().on('zoom', function () {
+                        //     var scale = d3.event.transform.k,
+                        //         translate = [d3.event.transform.x, d3.event.transform.y];
 
-                            if (svgTranslate) {
-                                translate[0] += svgTranslate[0];
-                                translate[1] += svgTranslate[1];
-                            }
+                        //     if (svgTranslate) {
+                        //         translate[0] += svgTranslate[0];
+                        //         translate[1] += svgTranslate[1];
+                        //     }
 
-                            if (svgScale) {
-                                scale *= svgScale;
-                            }
+                        //     if (svgScale) {
+                        //         scale *= svgScale;
+                        //     }
 
-                            svg.attr('transform', 'translate(' + translate[0] + ', ' + translate[1] + ') scale(' + scale + ')');
-                        }))
-                        .on('dblclick.zoom', null)
+                        //     svg.attr('transform', 'translate(' + translate[0] + ', ' + translate[1] + ') scale(' + scale + ')');
+                        // }))
+                        // .on('dblclick.zoom', null)
 
                     svgRelationships = svg.append('g')
                         .attr('class', 'relationships');
